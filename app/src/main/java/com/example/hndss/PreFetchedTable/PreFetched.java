@@ -1,4 +1,4 @@
-package com.example.hndss;
+package com.example.hndss.PreFetchedTable;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity
 public class PreFetched implements Serializable{
 
+    @ColumnInfo(name = "uid")
     @PrimaryKey
     private int uid;
 

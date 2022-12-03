@@ -1,4 +1,4 @@
-package com.example.hndss;
+package com.example.hndss.PreFetchedTable;
 
 import android.content.Context;
 import androidx.room.Room;
