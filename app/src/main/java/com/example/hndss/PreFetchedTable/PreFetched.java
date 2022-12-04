@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -17,7 +18,7 @@ public class PreFetched implements Serializable{
     private String name;
 
     @ColumnInfo(name = "dob")
-    private Date dob;
+    private String dob;
 
     @ColumnInfo(name = "lat")
     private double lat;
@@ -44,11 +45,11 @@ public class PreFetched implements Serializable{
         this.uid = uid;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 

@@ -1,5 +1,6 @@
 package com.example.hndss.ReadingTable;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -18,12 +19,13 @@ import java.io.Serializable;
 public class Reading implements Serializable {
 
     @ColumnInfo(name = "uid")
-    @PrimaryKey
+//    @PrimaryKey
     private int uid;
 
     // get epochs and convert to String
     @ColumnInfo(name = "timestamp")
-    @PrimaryKey
+//    @PrimaryKey
+    @NonNull
     private String timestamp;
 
     // in cm
