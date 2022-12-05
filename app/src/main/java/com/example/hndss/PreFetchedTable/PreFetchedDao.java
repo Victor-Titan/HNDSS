@@ -13,6 +13,9 @@ public interface PreFetchedDao {
     List<PreFetched> getAll();
 
     @Insert
+    void insert(PreFetched preFetched);
+
+    @Insert
     void insertAll(PreFetched... preFetcheds);
 
     @Delete

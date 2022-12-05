@@ -15,6 +15,9 @@ public interface ReadingDao {
     @Insert
     void insertAll(Reading... readings);
 
+    @Insert
+    void insert(Reading reading);
+
     @Delete
     void delete(Reading reading);
 

@@ -37,6 +37,14 @@
         android:layout_margin="15dp"
         android:onClick="SearchRevisit"
         ></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="View_Prefetched"
+        android:text="View PreFetched"></Button>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

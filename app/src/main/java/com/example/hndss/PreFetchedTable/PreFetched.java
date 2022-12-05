@@ -1,5 +1,6 @@
 package com.example.hndss.PreFetchedTable;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -11,8 +12,9 @@ import java.util.Date;
 public class PreFetched implements Serializable{
 
     @ColumnInfo(name = "uid")
+    @NonNull
     @PrimaryKey
-    private int uid;
+    private String uid;
 
     @ColumnInfo(name = "name")
     private String name;
@@ -21,59 +23,68 @@ public class PreFetched implements Serializable{
     private String dob;
 
     @ColumnInfo(name = "lat")
-    private double lat;
+    private String lat;
 
     @ColumnInfo(name = "lng")
-    private double lng;
+    private String lng;
 
     @ColumnInfo(name = "gender")
     private String gender;
 
-    public String getName() {
-        return name;
+    public void setUid(@NonNull String uid) {
+        this.uid = uid;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getUid() {
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public String getName() {
+        return name;
     }
 
     public String getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public double getLat() {
+    public String getLat() {
         return lat;
     }
 
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLng() {
+    public String getLng() {
         return lng;
-    }
-
-    public void setLng(double lng) {
-        this.lng = lng;
     }
 
     public String getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public PreFetched(String uid, String name, String dob, String lat, String lng, String gender) {
+        this.uid = uid;
+        this.name = name;
+        this.dob = dob;
+        this.lat = lat;
+        this.lng = lng;
         this.gender = gender;
     }
 }

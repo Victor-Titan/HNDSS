@@ -10,17 +10,13 @@ import com.example.hndss.PreFetchedTable.PreFetched;
 
 import java.io.Serializable;
 
-@Entity(primaryKeys = {"uid", "timestamp"},
-        foreignKeys = {@ForeignKey(entity = PreFetched.class,
-        parentColumns = "uid",
-        childColumns = "uid",
-        onDelete = ForeignKey.CASCADE)
-})
+@Entity(primaryKeys = {"uid", "timestamp"})
 public class Reading implements Serializable {
 
     @ColumnInfo(name = "uid")
 //    @PrimaryKey
-    private int uid;
+    @NonNull
+    private String uid;
 
     // get epochs and convert to String
     @ColumnInfo(name = "timestamp")
@@ -30,17 +26,17 @@ public class Reading implements Serializable {
 
     // in cm
     @ColumnInfo(name = "height")
-    private int height;
+    private String height;
 
     // in kgs
     @ColumnInfo(name = "weight")
-    private int weight;
+    private String weight;
 
-    public int getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
@@ -52,19 +48,26 @@ public class Reading implements Serializable {
         this.timestamp = timestamp;
     }
 
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public Reading(String uid, @NonNull String timestamp, String height, String weight) {
+        this.uid = uid;
+        this.timestamp = timestamp;
+        this.height = height;
         this.weight = weight;
     }
 }

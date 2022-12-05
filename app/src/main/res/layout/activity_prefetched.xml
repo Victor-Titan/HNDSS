@@ -8,36 +8,42 @@
     tools:context=".PrefetchedActivity">
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/uid"
         android:layout_height="wrap_content"
         android:hint="UID"
         android:layout_margin="15dp"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/name"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="name"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/dob"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="DOB"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/gender"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Gender"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/lat"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Latitude"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/lng"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Longitude"
@@ -47,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_margin="15dp"
-        android:onClick="Prefetched"
+        android:onClick="PrefetchedOnClick"
         ></Button>
 
 </LinearLayout>

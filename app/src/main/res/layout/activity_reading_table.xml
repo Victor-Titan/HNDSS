@@ -8,12 +8,21 @@
     tools:context=".ReadingTableActivity">
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/reading_uid"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="UID"
+        ></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/reading_height"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Height"
         ></EditText>
     <EditText
         android:layout_width="match_parent"
+        android:id="@+id/reading_weight"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Weight"

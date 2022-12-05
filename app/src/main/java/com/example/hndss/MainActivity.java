@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Pre process not needed since new record here
         startActivity(intent);
+        finish();
     }
 
     public void Edit_record(View view) {
@@ -27,8 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Pre process not needed since new record here
         startActivity(intent);
+        finish();
     }
 
+    public void View_Prefetched(View view) {
+        Intent intent = new Intent(MainActivity.this, ViewPrefetched.class);
+
+        startActivity(intent);
+        finish();
+    }
     public void SearchRevisit(View view) {
         Intent intent = new Intent(MainActivity.this, SearchToRevisitActivity.class);
 
