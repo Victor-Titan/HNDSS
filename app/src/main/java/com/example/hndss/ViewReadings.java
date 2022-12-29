@@ -24,6 +24,7 @@ public class ViewReadings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_view_readings);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("View Readings");
