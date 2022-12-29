@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewUsers">
+    tools:context=".ViewReadings">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/viewUsers"
+        android:id="@+id/viewReadings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"

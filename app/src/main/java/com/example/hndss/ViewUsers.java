@@ -1,6 +1,7 @@
 package com.example.hndss;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,8 +12,8 @@ import com.example.hndss.PreFetchedTable.PreFetchedClient;
 
 import java.util.List;
 
-public class ViewPrefetched extends AppCompatActivity {
-
+public class ViewUsers extends AppCompatActivity {
+    private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +36,8 @@ public class ViewPrefetched extends AppCompatActivity {
             // TODO set the ListView/RecyclerView here
             @Override
             protected void onPostExecute(List<PreFetched> preFetcheds) {
-                for(PreFetched pf : preFetcheds){
-                    Log.d("Editable","UID is " + pf.getUid());
+                for(PreFetched pf : preFetcheds) {
+                    Log.d("Editable", "UID is " + pf.getUid());
                 }
                 super.onPostExecute(preFetcheds);
             }

@@ -13,7 +13,7 @@ import com.example.hndss.PreFetchedTable.PreFetched;
 import com.example.hndss.PreFetchedTable.PreFetchedClient;
 
 
-public class PrefetchedActivity extends AppCompatActivity {
+public class NewUser extends AppCompatActivity {
 
     private EditText ETuid, ETname, ETdob, ETlat, ETlng, ETgender;
     @Override
@@ -31,7 +31,7 @@ public class PrefetchedActivity extends AppCompatActivity {
     }
 
     public void PrefetchedOnClick(View view) {
-        Intent intent = new Intent(PrefetchedActivity.this, MainActivity.class);
+        Intent intent = new Intent(NewUser.this, MainActivity.class);
         addUser();
 
 
