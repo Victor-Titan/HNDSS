@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchToRevisitActivity">
+    tools:context=".MYSQLFetch">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:id="@+id/fetchRevist"
+        android:id="@+id/UIDMYSQL"
         android:hint="UID"
         ></EditText>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_margin="50dp"
-        android:onClick="GoToRevisit"
+        android:layout_height="50dp"
+        android:text="Fetch MYSQL"
+        android:layout_margin="15dp"
         ></Button>
+
 </LinearLayout>

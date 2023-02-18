@@ -16,14 +16,26 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 public class ReadingTableActivity extends AppCompatActivity {
+    String UID,height,weight;
     private EditText ETuid,ETheight,ETweight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_reading_table);
         ETuid = findViewById(R.id.reading_uid);
         ETheight = findViewById(R.id.reading_height);
         ETweight = findViewById(R.id.reading_weight);
+        Intent i = getIntent();
+        UID = i.getStringExtra("UID");
+        height = i.getStringExtra("height");
+        weight = i.getStringExtra("weight");
+        ETuid.setText(UID);
+        ETheight.setText(height);
+        ETweight.setText(weight);
+        if(!UID.isEmpty()){
+            ETuid.setEnabled(false);
+        }
     }
 
     public void Submit(View view) {

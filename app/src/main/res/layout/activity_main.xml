@@ -43,14 +43,23 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:onClick="View_Prefetched"
+        android:backgroundTint="@color/purple_700"
         android:text="View PreFetched"></Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
+        android:backgroundTint="@color/purple_700"
         android:onClick="View_Readings"
         android:text="View Readings"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="FetchfromMYSQL"
+        android:text="Fetch from MYSQL"></Button>
 
     <Button
         android:layout_width="match_parent"

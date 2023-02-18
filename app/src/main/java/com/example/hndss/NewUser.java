@@ -14,25 +14,42 @@ import com.example.hndss.PreFetchedTable.PreFetchedClient;
 
 
 public class NewUser extends AppCompatActivity {
-
+    String UID = "" , name = "" , dob = "", lat = "" , glong = "" , gender = "";
     private EditText ETuid, ETname, ETdob, ETlat, ETlng, ETgender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prefetched);
-
+        Intent received = getIntent();
+        UID = received.getStringExtra("UID").toString();
+        name = received.getStringExtra("name").toString();
+        dob = received.getStringExtra("dob").toString();
+        lat = received.getStringExtra("lat").toString();
+        glong = received.getStringExtra("long").toString();
+        gender = received.getStringExtra("gender").toString();
         ETuid = findViewById(R.id.uid);
         ETname = findViewById(R.id.name);
         ETdob = findViewById(R.id.dob);
         ETlat = findViewById(R.id.lat);
         ETlng = findViewById(R.id.lng);
         ETgender = findViewById(R.id.gender);
-
+        ETuid.setText(UID);
+        ETname.setText(name);
+        ETdob.setText(dob);
+        ETlat.setText(lat);
+        ETlng.setText(glong);
+        ETgender.setText(gender);
+        if(!UID.isEmpty()){
+            ETuid.setEnabled(false);
+        }
     }
 
     public void PrefetchedOnClick(View view) {
-        Intent intent = new Intent(NewUser.this, MainActivity.class);
+        Intent intent = new Intent(NewUser.this, ReadingTableActivity.class);
         addUser();
+        intent.putExtra("UID",ETuid.getText().toString());
+        intent.putExtra("height","");
+        intent.putExtra("weight","");
 
 
         // put arguments here if needed

@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void New_user(View view) {
         Intent intent = new Intent(MainActivity.this, NewUser.class);
-
-        // Pre process not needed since new record here
+        intent.putExtra("UID","");
+        intent.putExtra("name","");
+        intent.putExtra("dob","");
+        intent.putExtra("lat","");
+        intent.putExtra("long","");
+        intent.putExtra("gender","");
+        // Passing empty strings to avoid NULL errors
         startActivity(intent);
     }
 
@@ -44,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
     public void View_Readings(View view) {
         Intent intent = new Intent(MainActivity.this, ViewReadings.class);
         Log.e("In ONCLICK","Entered");
+        startActivity(intent);
+    }
+
+    public void FetchfromMYSQL(View view) {
+        Intent intent = new Intent(MainActivity.this, MYSQLFetch.class);
         startActivity(intent);
     }
 }
