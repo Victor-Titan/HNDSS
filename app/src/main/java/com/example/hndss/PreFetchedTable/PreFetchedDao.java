@@ -4,6 +4,8 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.RawQuery;
+import androidx.sqlite.db.SimpleSQLiteQuery;
 
 import java.util.List;
 
@@ -11,6 +13,9 @@ import java.util.List;
 public interface PreFetchedDao {
     @Query("SELECT * FROM PreFetched")
     List<PreFetched> getAll();
+
+    @RawQuery
+    List<PreFetched> getUIDPrefetched(SimpleSQLiteQuery query);
 
     @Insert
     void insert(PreFetched preFetched);

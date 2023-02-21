@@ -14,10 +14,10 @@
         android:hint="UID"
         ></EditText>
     <Button
+        android:id="@+id/go_to_revisit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search"
         android:layout_margin="50dp"
-        android:onClick="GoToRevisit"
         ></Button>
 </LinearLayout>

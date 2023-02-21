@@ -6,18 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MYSQLFetch">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:id="@+id/UIDMYSQL"
-        android:hint="UID"
-        ></EditText>
+        android:hint="UID" />
+
     <Button
+        android:id="@+id/mysql_fetch"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Fetch MYSQL"
-        android:layout_margin="15dp"
-        ></Button>
+        android:layout_margin="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_set"
+        android:layout_margin="5dp" />
 
 </LinearLayout>
