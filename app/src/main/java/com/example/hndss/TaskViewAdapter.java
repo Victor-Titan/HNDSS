@@ -30,10 +30,10 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.TasksV
     @Override
     public void onBindViewHolder(TasksViewHolder holder, int position) {
         Reading t = taskList.get(position);
-        holder.textViewTask.setText(t.getUid());
-        holder.textViewDesc.setText(t.getTimestamp());
-        holder.textViewFinishBy.setText(t.getHeight());
-        holder.textViewStatus.setText(t.getWeight());
+        holder.textViewTask.setText("UID = "+t.getUid());
+        holder.textViewDesc.setText("TIMESTAMP = "+t.getTimestamp());
+        holder.textViewFinishBy.setText("Height = "+t.getHeight());
+        holder.textViewStatus.setText("Weight = "+t.getWeight());
     }
     @Override
     public int getItemCount() {

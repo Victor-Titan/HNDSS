@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Number of Entries today: 5"
-        android:gravity="center"
-        android:textSize="30dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,28 +36,26 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:onClick="View_Prefetched"
-        android:backgroundTint="@color/purple_700"
-        android:text="View PreFetched"></Button>
+        android:text="View Permanent Entries"></Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:backgroundTint="@color/purple_700"
         android:onClick="View_Readings"
-        android:text="View Readings"></Button>
+        android:text="View Reading Entries"></Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:onClick="FetchfromMYSQL"
+        android:onClick="Fetch_from_MYSQL"
         android:text="Fetch from MYSQL"></Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Submit for the Day"
         android:layout_margin="50dp"
         ></Button>
 

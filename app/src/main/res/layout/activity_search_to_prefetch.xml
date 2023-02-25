@@ -17,7 +17,7 @@
         android:id="@+id/go_to_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="Load Data"
         android:layout_margin="50dp"
         ></Button>
 </LinearLayout>
