@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -58,7 +59,7 @@ public class ReadingTableActivity extends AppCompatActivity {
             protected Void doInBackground(Void... voids) {
                 String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
                 Reading reading = new Reading(uid, timeStamp, height, weight);
-
+                Log.e("Adding:",height+weight+uid+timeStamp);
                 ReadingClient.getInstance(getApplicationContext())
                         .getReadingDatabase()
                         .readingDao()

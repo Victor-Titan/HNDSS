@@ -46,14 +46,17 @@ public class NewUser extends AppCompatActivity {
 
     public void PrefetchedOnClick(View view) {
         Intent intent = new Intent(NewUser.this, ReadingTableActivity.class);
-        addUser();
+        if(UID.isEmpty()) {
+            addUser();
+            Toast.makeText(this,"Permanent Table Submitted successfully",Toast.LENGTH_SHORT).show();
+        }
         intent.putExtra("UID",ETuid.getText().toString());
         intent.putExtra("height","");
         intent.putExtra("weight","");
 
 
         // put arguments here if needed
-        Toast.makeText(this,"Permanent Table Submitted successfully",Toast.LENGTH_SHORT).show();
+
         startActivity(intent);
         finish();
     }

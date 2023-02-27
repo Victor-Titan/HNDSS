@@ -30,9 +30,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Add"
         android:layout_margin="15dp"
-        android:onClick="Add"
+        android:onClick="Submit"
         ></Button>
 
 </LinearLayout>
