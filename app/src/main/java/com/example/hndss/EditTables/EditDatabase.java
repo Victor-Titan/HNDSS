@@ -5,5 +5,5 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Edit.class}, version = 1)
 public abstract class EditDatabase extends RoomDatabase{
-    public abstract EditDao readingDao();
+    public abstract EditDao editDao();
 }

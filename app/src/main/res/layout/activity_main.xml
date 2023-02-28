@@ -19,8 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Edit Record"
         android:layout_margin="15dp"
-        android:onClick="Edit_record"
-
+        android:clickable="false"
         ></Button>
 
     <Button
@@ -49,10 +48,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:onClick="Fetch_from_MYSQL"
+        android:onClick="FetchfromMYSQL"
         android:text="Fetch from MYSQL"></Button>
 
     <Button
+        android:id="@+id/final_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit for the Day"

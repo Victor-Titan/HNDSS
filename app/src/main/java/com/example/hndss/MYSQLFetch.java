@@ -70,19 +70,6 @@ public class MYSQLFetch extends AppCompatActivity {
                         .getPreFetchedDatabase()
                         .preFetchedDao()
                         .insert(new PreFetched(uid, name, dob, lat, lng, gender));
-
-                statement = connection.prepareStatement("SELECT * FROM reading WHERE UID = ? ORDER BY TIMSTP DESC LIMIT 1");
-                statement.setString(1, uid_val);
-                resultSet = statement.executeQuery();
-                resultSet.next();
-                String timstp = resultSet.getTimestamp(2).toString();
-                String height = resultSet.getString(3);
-                String weight = resultSet.getString(4);
-
-                ReadingClient.getInstance(getApplicationContext())
-                        .getReadingDatabase()
-                        .readingDao()
-                        .insert(new Reading(uid, timstp, height, weight));
             }
             catch (Exception e)
             {
@@ -95,11 +82,7 @@ public class MYSQLFetch extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
-            try {
-                res.setText(resultSet.getTimestamp(2).toString());
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            Toast.makeText(MYSQLFetch.this, "Fetched Entry Successfully!", Toast.LENGTH_SHORT).show();
         }
     }
 }

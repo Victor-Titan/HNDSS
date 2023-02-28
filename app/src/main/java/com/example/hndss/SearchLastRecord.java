@@ -13,6 +13,8 @@ import androidx.annotation.RequiresPermission;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.sqlite.db.SimpleSQLiteQuery;
 
+import com.example.hndss.EditTables.Edit;
+import com.example.hndss.EditTables.EditClient;
 import com.example.hndss.ReadingTable.Reading;
 import com.example.hndss.ReadingTable.ReadingClient;
 
