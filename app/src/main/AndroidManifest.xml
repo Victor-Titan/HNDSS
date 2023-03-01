@@ -15,6 +15,13 @@
         android:theme="@style/Theme.HNDSS"
         tools:targetApi="31">
         <activity
+            android:name=".MYSQLFetchEdit"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MYSQLFetch"
             android:exported="false" />
         <activity

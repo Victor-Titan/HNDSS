@@ -114,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Edit_record(View view) {
+    public void FetchFromMySQLEdit(View view) {
 
-        Intent intent = new Intent(MainActivity.this, SearchLastRecord.class);
+        Intent intent = new Intent(MainActivity.this, MYSQLFetchEdit.class);
 
         // Pre process not needed since new record here
         startActivity(intent);

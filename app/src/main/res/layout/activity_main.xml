@@ -17,14 +17,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit Record"
-        android:layout_margin="15dp"
-        android:clickable="false"
-        ></Button>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="Revisit User"
         android:layout_margin="15dp"
         android:onClick="SearchRevisit"
@@ -49,7 +41,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:onClick="FetchfromMYSQL"
-        android:text="Fetch from MYSQL"></Button>
+        android:text="Fetch from MYSQL for Revisit"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="FetchFromMySQLEdit"
+        android:text="Fetch from MySQL for Edit" />
 
     <Button
         android:id="@+id/final_submit"

@@ -4,38 +4,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hndss.PreFetchedTable.PreFetched;
 import com.example.hndss.PreFetchedTable.PreFetchedClient;
-import com.example.hndss.ReadingTable.Reading;
-import com.example.hndss.ReadingTable.ReadingClient;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
-public class MYSQLFetch extends AppCompatActivity {
+public class MYSQLFetchEdit extends AppCompatActivity {
 
     EditText uid;
     Button fetch;
-    TextView res;
     ResultSet resultSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mysqlfetch);
+        setContentView(R.layout.activity_mysqlfetchedit);
 
-        uid = (EditText) findViewById(R.id.UIDMYSQL);
-        fetch = (Button) findViewById(R.id.mysql_fetch);
+        uid = (EditText) findViewById(R.id.UIDMYSQL_edit);
+        fetch = (Button) findViewById(R.id.mysql_fetch_edit);
 
         fetch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +63,10 @@ public class MYSQLFetch extends AppCompatActivity {
                         .getPreFetchedDatabase()
                         .preFetchedDao()
                         .insert(new PreFetched(uid, name, dob, lat, lng, gender));
+
+                statement = connection.prepareStatement("DELETE FROM reading WHERE uid = ? ORDER BY timstp DESC LIMIT 1");
+                statement.setString(1, uid_val);
+                statement.executeUpdate();
             }
             catch (Exception e)
             {
@@ -81,7 +79,7 @@ public class MYSQLFetch extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
-            Toast.makeText(MYSQLFetch.this, "Fetched Entry Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MYSQLFetchEdit.this, "Fetched Entry Successfully!", Toast.LENGTH_SHORT).show();
         }
     }
 }
